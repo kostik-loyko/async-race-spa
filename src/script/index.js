@@ -2,6 +2,6 @@ import '../index.html';
 import '../style/normalize.css';
 import '../style/style.scss';
 
+import app from './app/app';
 
-let promise = fetch('http://127.0.0.1:3000/garage');
-console.log(promise);
+app();
