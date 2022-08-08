@@ -1,5 +1,5 @@
-import createGaragePage from "./garagPage";
-import createStatisticsPage from "./statisticsPage";
+import createGaragePage from './garage';
+import createStatisticsPage from './statistics';
 
 const buttonsPages = () => {
   const btnMain = document.createElement('a');
@@ -26,7 +26,7 @@ const buttonsPages = () => {
     } else if (hash === btnStatistics.id) {
       createStatisticsPage();
     }
-  })
-}
+  });
+};
 
 export default buttonsPages;
