@@ -1,0 +1,27 @@
+.btn-main {
+  display: inline-block;
+  background-color: chocolate;
+  color: white;
+  font-weight: 900;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: 1rem 1rem 1rem 0;
+  outline: none;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem black;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.btn-main:hover {
+  transform: translateY(-0.1rem);
+}
+
+.btn-main:active {
+  transform: translateY(0rem);
+}
+
+.conteiner-main {
+  background-color: gray;
+  height: 70vh;
+  padding: 0.5rem;
+}

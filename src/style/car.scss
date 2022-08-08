@@ -1,0 +1,95 @@
+.conteiner-car {}
+
+.conteiner-car-btns {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.car-btn-select {
+  background-color: goldenrod;
+}
+
+.btn-main {}
+
+.car-btn-remove {
+  background-color: goldenrod;
+}
+
+.car-title {}
+
+.conteiner-car-car {
+  position: relative;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 2px dashed black;
+}
+
+.car-img {
+  position: absolute;
+  left: 8rem;
+  width: 3.5rem;
+}
+
+.car-img-animation {
+  animation: move 1s forwards linear;
+}
+
+@keyframes move {
+  from {
+    left: 8rem;
+  }
+
+  to {
+    left: 92%;
+  }
+}
+
+.car-btn-move {
+  font-weight: 900;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.car-btn-move:active {
+  background-color: red;
+  border: 2px solid red;
+}
+
+.car-btn-move-active {
+  background-color: red;
+  border: 2px solid red;
+}
+
+.car-btn-move:hover {
+  border: 2px solid red;
+}
+
+.car-btn-stop {
+  font-weight: 900;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.car-btn-stop:hover {
+  border: 2px solid green;
+}
+
+.car-btn-stop:active {
+  background-color: green;
+  border: 2px solid green;
+}
+
+.falg-img {
+  position: absolute;
+  right: 10%;
+  width: 3rem;
+}
+
+.falg {
+  width: 0rem;
+}

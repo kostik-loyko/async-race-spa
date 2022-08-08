@@ -1,0 +1,21 @@
+body {
+  background-color: bisque;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+@import url('./body.scss');
+@import url('./car.scss');
