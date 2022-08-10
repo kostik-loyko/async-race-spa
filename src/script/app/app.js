@@ -1,4 +1,4 @@
-import buttonsPages from './buttonsPages';
+import buttonsPages from './pages';
 
 function app() {
   buttonsPages();
