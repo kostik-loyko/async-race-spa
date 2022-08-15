@@ -1,0 +1,66 @@
+.container-config {}
+
+.create {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.create-input {
+  font-weight: 900;
+}
+
+.create-color {
+  height: 1.5rem;
+  width: 2.5rem;
+  background-color: yellow;
+  border: 0.2rem solid black;
+}
+
+.create-btn {
+  background-color: #e6d8d8;
+  color: black;
+}
+
+.btn-main {}
+
+.update {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.update-input {}
+
+.update-color {
+  height: 1.5rem;
+  width: 2.5rem;
+  background-color: yellow;
+  border: 0.2rem solid black;
+}
+
+.update-btn {
+  background-color: #e6d8d8;
+  color: black;
+}
+
+.race {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.race-rase-btn {
+  background-color: #e45454;
+}
+
+.race-rase-btn-disabled {
+  background-color: #9b8f8f;
+  cursor: default;
+}
+
+.race-reset-btn {
+  background-color: #72ac3c;
+}
+
+.race-cars-btn {}

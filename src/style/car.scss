@@ -29,22 +29,8 @@
 
 .car-img {
   position: absolute;
-  left: 8rem;
+  left: 14%;
   width: 3.5rem;
-}
-
-.car-img-animation {
-  animation: move 1s forwards linear;
-}
-
-@keyframes move {
-  from {
-    left: 8rem;
-  }
-
-  to {
-    left: 92%;
-  }
 }
 
 .car-btn-move {
@@ -92,4 +78,5 @@
 
 .falg {
   width: 0rem;
+  height: 0rem;
 }
