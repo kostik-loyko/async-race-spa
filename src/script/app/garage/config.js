@@ -3,12 +3,12 @@ async function createConfig(elemhtml) {
   let config = `<div class="container-config">
   <div class="create">
     <input type="text" class="create-input">
-    <div class="create-color"></div>
+    <input type="color" class="create-color" value="#f82525">
     <button class="create-btn btn-main">create</button>
   </div>
   <div class="update">
     <input type="text" class="update-input">
-    <div class="update-color"></div>
+    <input type="color" class="update-color" value="#39f613">
     <button class="update-btn btn-main">update</button>
   </div>
   <div class="race">
@@ -18,8 +18,9 @@ async function createConfig(elemhtml) {
   </div>
 </div>`;
 
-  elemhtml.insertAdjacentHTML('beforeend', config);
 
+
+  elemhtml.insertAdjacentHTML('beforeend', config);
 }
 
 export default createConfig;

@@ -1,6 +1,6 @@
 import { getCars } from '../api';
 
-const race = async () => {
+const race = async (modal) => {
   const raceBtn = document.querySelector('.race-rase-btn');
   const resetBtn = document.querySelector('.race-reset-btn');
   const carsRoads = document.querySelectorAll('.conteiner-car');
@@ -34,11 +34,10 @@ const race = async () => {
             cars.forEach(cardb => {
               if (cardb.id == car.id && counter === 0) {
                 counter++;
-
-                let winner = document.createElement('h2');
-                winner.className = 'winner';
-                winner.textContent = `Winner ${cardb.name}`;
-                document.body.append(winner);
+                let winner = `<div class="modal">
+                                <h2 class="winner">Winner ${cardb.name}</h2>
+                              </div>`;
+                modal.insertAdjacentHTML('beforeend', winner);
               }
             });
           }
@@ -50,9 +49,10 @@ const race = async () => {
         makeBig();
         const getDrive = async () => {
           try {
-            await fetch(`http://127.0.0.1:3000/engine?id=${car.id}&status=drive`, {
+            let responseDive = await fetch(`http://127.0.0.1:3000/engine?id=${car.id}&status=drive`, {
               method: 'PATCH',
             });
+            await responseDive.json();
           } catch (err) {
             cancelAnimationFrame(reqAnim);
           }
@@ -63,6 +63,7 @@ const race = async () => {
 
       resetBtn.addEventListener('click', () => {
         counter = 0;
+        modal.innerHTML = '';
         raceBtn.removeAttribute('disabled');
         raceBtn.classList.remove('race-rase-btn-disabled');
         btnMove.classList.remove('car-btn-move-active');

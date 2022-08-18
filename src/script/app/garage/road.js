@@ -1,16 +1,18 @@
 import carMove from './move';
 import { getCars } from '../api';
 import race from './race';
+import createCar from './createCar';
 
 async function createRoad(elemhtml) {
 
   let cars = await getCars();
+  createCar();
 
   cars.forEach(car => {
     let road = `<div class="conteiner-car">
   <div class="conteiner-car-btns">
-    <button class="car-btn-select btn-main">select</button>
-    <button class="car-btn-remove btn-main">remove</button>
+    <button id="${car.id}sel" class="car-btn-select btn-main">select</button>
+    <button id="${car.id}rem"class="car-btn-remove btn-main">remove</button>
     <h3 class="car-title">${car.name}</h3>
   </div>
   <div class="conteiner-car-car">
@@ -29,9 +31,12 @@ async function createRoad(elemhtml) {
 
   });
 
+  const modal = document.createElement('div');
+  modal.className = 'modal-conteiner';
+  elemhtml.append(modal);
 
   carMove();
-  race();
+  race(modal);
 }
 
 export default createRoad;

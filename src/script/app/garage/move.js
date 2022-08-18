@@ -37,9 +37,10 @@ const carMove = async () => {
 
         const getDrive = async () => {
           try {
-            await fetch(`http://127.0.0.1:3000/engine?id=${car.id}&status=drive`, {
+            let responseDive = await fetch(`http://127.0.0.1:3000/engine?id=${car.id}&status=drive`, {
               method: 'PATCH',
             });
+            await responseDive.json();
           } catch (err) {
             cancelAnimationFrame(reqAnim);
           }
