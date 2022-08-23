@@ -7,10 +7,15 @@ const createGaragePage = () => {
   const conteiner = document.createElement('div');
   conteiner.className = 'conteiner-main';
   document.querySelector('.wrapper').append(conteiner);
+
+  const conteinerCar = document.createElement('div');
+  conteinerCar.className = 'conteiner-car';
+
+
   createGarageTitle(conteiner);
   createConfig(conteiner);
-  createRoad(conteiner);
-
+  conteiner.append(conteinerCar);
+  createRoad(conteinerCar);
   return conteiner
 };
 

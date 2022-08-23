@@ -9,7 +9,7 @@ async function createGarageTitle(elemhtml) {
     <h2 class="page-counter">Page #</h2>
   </div>`;
 
-  elemhtml.insertAdjacentHTML('beforeend', title);
+  elemhtml.insertAdjacentHTML('afterbegin', title);
 }
 
 export default createGarageTitle;

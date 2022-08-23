@@ -3,12 +3,12 @@ import { getCars } from '../api';
 const race = async (modal) => {
   const raceBtn = document.querySelector('.race-rase-btn');
   const resetBtn = document.querySelector('.race-reset-btn');
-  const carsRoads = document.querySelectorAll('.conteiner-car');
   let cars = await getCars();
   let reqAnim;
   let counter = 0;
   raceBtn.addEventListener('click', () => {
 
+    const carsRoads = document.querySelectorAll('.conteiner-car');
     raceBtn.setAttribute('disabled', 'disabled');
     raceBtn.classList.add('race-rase-btn-disabled');
 

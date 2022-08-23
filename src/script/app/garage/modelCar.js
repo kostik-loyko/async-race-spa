@@ -1,5 +1,4 @@
-
-const modelCar = async () => {
+export const modelCar = () => {
 
   let car = {
     name: '',
@@ -8,16 +7,31 @@ const modelCar = async () => {
 
   const carName = document.querySelector('.create-input');
   carName.addEventListener('change', () => {
-    console.log(carName.value);
     car.name = carName.value;
   })
   const carColor = document.querySelector('.create-color');
   carColor.addEventListener('change', () => {
-    console.log(carColor.value);
     car.color = carColor.value;
   })
 
   return car
 }
 
-export default modelCar;
+export const modelCarUp = () => {
+
+  let car = {
+    name: '',
+    color: '#39f613',
+  }
+
+  const carName = document.querySelector('.update-input');
+  carName.addEventListener('change', () => {
+    car.name = carName.value;
+  })
+  const carColor = document.querySelector('.update-color');
+  carColor.addEventListener('change', () => {
+    car.color = carColor.value;
+  })
+
+  return car
+}
